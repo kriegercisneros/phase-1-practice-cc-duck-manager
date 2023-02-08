@@ -5,8 +5,8 @@ fetch('http://localhost:3000/ducks')
 .then((resp) => resp.json())
 .then(data=>{
     populateDucks(data);
-
 })
+
 //variable for displaying all ducks at top of page 
 const duckNav = document.querySelector('#duck-nav');
 //variables for displaying a single duck in the duck-display
@@ -17,8 +17,6 @@ let duckDisplayImage = document.querySelector('#duck-display-image');
 let duckDisplayLikes = document.querySelector('#duck-display-likes');
 //variables for accessing newDuckForm 
 const newDuckForm = document.querySelector('#new-duck-form');
-
-
 
 
 function populateDucks(ducks){
@@ -61,7 +59,6 @@ newDuckForm.addEventListener('submit', (e)=>{
     function appendNewDuck(ele){
         const img = document.createElement('img');
         img.src = ele.img_url;
-
         duckNav.append(img);
 
         img.addEventListener('click', () => {
@@ -69,13 +66,6 @@ newDuckForm.addEventListener('submit', (e)=>{
         })
     }
     appendNewDuck(newDuck)
-    // duckNav.append(newDuck);
-    // displaySingleDuck(newDuck)
-
-    // duckNav.append(ele.img_url);
-        // ele.addEventListener('click', () => {
-        //     displaySingleDuck(ele)
-        // })
 })
 
 
