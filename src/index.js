@@ -38,13 +38,18 @@ function displaySingleDuck(singleDuck){
     
     duckDisplayName.innerText = currDuck.name;
     duckDisplayImage.src = currDuck.img_url;
-    duckDisplayLikes.innerText = currDuck.likes;
+    duckDisplayLikes.innerText = `${currDuck.likes} likes`;
+    debugger
 }
 
 duckDisplayLikes.addEventListener('click', ()=>{
     //when user clicks, increments the ducksDisplayLikes by 1
-    let currLikes = duckDisplayLikes.innerText++
-    currDuck.likes = currLikes
+    // function currLikes(){
+    duckDisplayLikes.innerText = `${currDuck.likes++} likes`; 
+    // }
+     
+    // currDuck.likes = currLikes
+
     // displaySingleDuck(currDuck)
 })
 
